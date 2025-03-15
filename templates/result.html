@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Prediction Result</h1>
+
+        <!-- Result Card -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h5 class="card-title">Prediction</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><strong>Prediction:</strong> {{ result.prediction }}</p>
+                <p class="card-text"><strong>Probability:</strong> {{ result.probability }}</p>
+            </div>
+        </div>
+
+        <!-- Probability Chart -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h5 class="card-title">Probability of Diabetes</h5>
+            </div>
+            <div class="card-body">
+                {{ probability_chart|safe }}
+            </div>
+        </div>
+
+        <!-- Risk Level Chart -->
+        <div class="card my-4">
+            <div class="card-header">
+                <h5 class="card-title">Diabetes Risk Level</h5>
+            </div>
+            <div class="card-body">
+                {{ risk_level_chart|safe }}
+            </div>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="text-center">
+            <a href="/" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5>Disclaimer</h5>
+                    <p>
+                        This diabetes detection system is based on a machine learning model trained on a dataset with fewer than 10,000 samples. While the model provides predictions, the dataset size may limit its accuracy. This tool is intended to help you understand potential risks and is not a substitute for professional medical advice. Always consult a healthcare provider for accurate diagnosis and treatment.
+                    </p>
+                    <h5>Acknowledgement</h5>
+                    <p>
+                        The dataset used to train this model was obtained from <a href="https://www.kaggle.com" target="_blank">Kaggle.com</a>.
+                    </p>
+                    <h5>About Me</h5>
+                    <p>
+                        My name is <strong>Talha Midrar</strong>. I hold an <strong>M. Phil in Mathematics</strong>, and my research focused on decision-making systems. I am a certified Data Scientist from IBM and have completed multiple courses in Machine Learning, Data Science, Data Analysis, and Full Stack Development. I am currently expanding my knowledge in Deep Learning and Natural Language Processing. This journey of learning will never stop. Thank you!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
